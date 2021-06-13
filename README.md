@@ -5,7 +5,7 @@ As of right now the API doesn't seem to impose any sort of rate-limitation, but 
 # Quickstart
 
 1. Obtain the script (either clone the repository or download the file directly)
-2. Obtain a Discord authentication token for your profile (it's commonly found as an `"Authorization"` header value in many requests - take a look at the devtools)
+2. Obtain a Discord authentication token of your account (it's commonly found as an `"Authorization"` header value in many requests - take a look at the devtools)
 3. Run the script: 
 
 ```sh
