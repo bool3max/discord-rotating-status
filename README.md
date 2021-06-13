@@ -1,5 +1,7 @@
 This simple script allows you to "cycle" your Discord profile status periodically. It has no external dependencies, and supports both default and custom emojis. 
 
+As of right now the API doesn't seem to impose any sort of rate-limitation, but I fully expect that to change in the future.
+
 # Quickstart
 
 1. Obtain the script (either clone the repository or download the file directly)
@@ -7,7 +9,7 @@ This simple script allows you to "cycle" your Discord profile status periodicall
 3. Run the script: 
 
 ```sh
-$ cycle.py <auth_token> <status_combo_1> <status_combo_2> [...]
+$ cycler.py <auth_token> <status_combo_1> <status_combo_2> [...]
 ```
 
 `<auth_token>` is your personal authentication token. Every commandline argument after that represents a status combo formed of 3 strings (delimited by colons (`:`)), in the following form:
@@ -34,7 +36,7 @@ The IDs of the custom emojis are in fact ***not*** the ones provided by the Disc
 1. Clear your status and make sure the script is not running
 2. Open the devtools and select the "Network" tab
 3. Set your status manually from within the Discord UI, choosing the appropriate custom emoji
-4. Observe the appropriate request in the "Network" tab (the Chrome devtools shorten it's URL to `settings`) and select it
+4. Observe the appropriate request in the "Network" tab (the Chrome devtools shorten its URL to `settings`) and select it
 5. Observe the correct `emoji_id` value in the JSON request payload of the request
 
 ### `systemd` service unit for autostarting on linux systems
