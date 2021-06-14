@@ -22,11 +22,11 @@ $ cycler.py <auth_token> <status_combo_1> <status_combo_2> [...]
 * `<emoji_name>` is the *name* of the emoji to the left of the status text
 * `<emoji_id>` is the internal Discord ID of the emoji you're trying to use, and is only required for custom (*non-default*) emojis
 
-Example CLI: `$ cycle.py <token> how:grin: you:grin: doin?:bean:801184256202113054`
+Example CLI: `$ cycler.py <token> how:grin: you:grin: doin?:bean:801184256202113054`
 
 ---
 
-Once the script is run, it will infinitely cycle between all provided status combos. The default wait time between requests is `1` second. If a network error occurs, the delay time is increased
+Once the script is run, it will indefinitely cycle between all provided status combos. The default wait time between requests is `1` second. If a network error occurs, the delay time is increased
 by `1` second. After a successful request occurs after many failed attempts, the delay time is reset back to `1` second.
 
 ### Caveat concerning custom emoji IDs
