@@ -29,7 +29,7 @@ Example CLI: `$ cycler.py <token> how:grin: you:grin: doin?:bean:801184256202113
 Once the script is run, it will indefinitely cycle between all provided status combos. The default wait time between requests is `1` second. If a network error occurs, the delay time is increased
 by `1` second. After a successful request occurs after many failed attempts, the delay time is reset back to `1` second.
 
-### Caveat concerning custom emoji IDs
+### Caveat regarding custom emoji IDs
 
 The IDs of the custom emojis are in fact ***not*** the ones provided by the Discord "Developer mode" Copy-ID action from the UI. In order to obtain the correct ID of a custom emoji, you need to: 
 
