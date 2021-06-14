@@ -18,9 +18,9 @@ $ cycler.py <auth_token> <status_combo_1> <status_combo_2> [...]
 <status_text>:<emoji_name>:<emoji_id>
 ```
 
-* `<status_text>` is the actual text of your status, and is the only required part.
-* `<emoji_name>` is the *name* of the emoji to the left of the status text.
-* `<emoji_id>` is the internal Discord ID of the emoji you're trying to use, and is only required for custom (*non-default*) emojis.
+* `<status_text>` is the actual text of your status - it is optional
+* `<emoji_name>` is the *name* of the emoji to the left of the status text
+* `<emoji_id>` is the internal Discord ID of the emoji you're trying to use, and is only required for custom (*non-default*) emojis
 
 Example CLI: `$ cycle.py <token> how:grin: you:grin: doin?:bean:801184256202113054`
 
