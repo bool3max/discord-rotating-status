@@ -5,7 +5,7 @@ As of right now the API doesn't seem to impose any sort of rate-limitation, but 
 # Quickstart
 
 1. Obtain the script (either clone the repository or download the file directly)
-2. Obtain a Discord authentication token for your profile (it's commonly found as an `"Authorization"` header value in many requests - take a look at the devtools)
+2. Obtain a Discord authentication token of your account (it's commonly found as an `"Authorization"` header value in many requests - take a look at the devtools)
 3. Run the script: 
 
 ```sh
@@ -18,18 +18,18 @@ $ cycler.py <auth_token> <status_combo_1> <status_combo_2> [...]
 <status_text>:<emoji_name>:<emoji_id>
 ```
 
-* `<status_text>` is the actual text of your status, and is the only required part.
-* `<emoji_name>` is the *name* of the emoji to the left of the status text.
-* `<emoji_id>` is the internal Discord ID of the emoji you're trying to use, and is only required for custom (*non-default*) emojis.
+* `<status_text>` is the actual text of your status - it is optional
+* `<emoji_name>` is the *name* of the emoji to the left of the status text
+* `<emoji_id>` is the internal Discord ID of the emoji you're trying to use, and is only required for custom (*non-default*) emojis
 
-Example CLI: `$ cycle.py <token> how:grin: you:grin: doin?:bean:801184256202113054`
+Example CLI: `$ cycler.py <token> how:grin: you:grin: doin?:bean:801184256202113054`
 
 ---
 
-Once the script is run, it will infinitely cycle between all provided status combos. The default wait time between requests is `1` second. If a network error occurs, the delay time is increased
+Once the script is run, it will indefinitely cycle between all provided status combos. The default wait time between requests is `1` second. If a network error occurs, the delay time is increased
 by `1` second. After a successful request occurs after many failed attempts, the delay time is reset back to `1` second.
 
-### Caveat concerning custom emoji IDs
+### Caveat regarding custom emoji IDs
 
 The IDs of the custom emojis are in fact ***not*** the ones provided by the Discord "Developer mode" Copy-ID action from the UI. In order to obtain the correct ID of a custom emoji, you need to: 
 
